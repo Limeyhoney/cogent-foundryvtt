@@ -1,0 +1,28 @@
+<section>
+    <table>
+        <tr class="flex">
+            <td title="{{data.description}}" class="left flex">
+                <div>{{name}}</div>
+                <a class="cogent-croll" title="Combat Roll" data-id="{{_id}}">
+                    <i class="fas fa-dice" data-id="{{_id}}"></i>
+                </a>
+            </td>
+            <td class="middle">{{localize (sum4 "cogent.attackRange." data.range "" "")}}</td>
+            <td class="right rightAlign">
+                <a class="cogent-item-remove" title="Remove Item" data-id="{{_id}}">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        <tr class="flex">
+            <td title="Bonus Dice" class="left">{{localize "cogent.bonus"}}: {{data.bonus}}{{localize "cogent.dice"}}</td>
+            <td title="Situational Malus Dice" class="middle">{{localize "cogent.malus"}}: {{data.malus}}{{localize "cogent.dice"}}</td>
+            <td title="Ammo" class="right flex">
+                {{#if (gte data.ammo 0)}}
+                <div class="inputName">{{localize "cogent.weapon.ammo"}}</div>
+                <input class="input inline-edit" data-id="{{_id}}" data-field="data.ammo" type="number" name="data.ammo" value="{{data.ammo}}" data-dtype="Number" min="0"/>
+                {{/if}}
+            </td>
+        </tr>
+    </table>
+</section>

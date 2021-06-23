@@ -1,0 +1,23 @@
+<section>
+    <table>
+        <tr class="flex">
+            <td title="{{data.description}}" class="left">{{name}}</td>
+            <td class="right rightAlign">
+                <a class="cogent-item-edit" title="Edit Item" data-id="{{_id}}">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <a class="cogent-item-remove" title="Remove Item" data-id="{{_id}}">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        <tr class="flex">
+            <td class="left">{{localize "cogent.amount"}}:</td>
+            <td title="Amount" class="right">
+                <input class="input inline-edit" data-field="data.count" data-id="{{_id}}" type="number" name="data.count" value="{{data.count}}" data-dtype="Number" min="0"/>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+</section>

@@ -1,0 +1,20 @@
+<section>
+    <table>
+        <tr class="flex">
+            <td title="{{data.description}}" class="left">{{name}}</td>
+            <td class="right rightAlign">
+                <a class="cogent-item-remove" title="Remove Item" data-id="{{_id}}">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        <tr class="flex">
+            <td class="left">{{localize "cogent.armor"}}:</td>
+            <td title="Armor" class="right">
+                <input data-id="{{_id}}" name="{{data.armor}}" type="number" name="data.armor" value="{{data.armor}}" data-dtype="Number" min="0" readonly="true"/>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+</section>

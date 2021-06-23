@@ -1,0 +1,107 @@
+{
+    "cogent": {
+        "dice": "d6",
+        "total": "Total",
+        "bonus": "Bonus",
+        "malus": "Malus",
+        "armor": "Armor",
+        "amount": "Amount",
+        "attackRange": {
+            "none": " ",
+            "ranged": "Ranged",
+            "melee": "Melee"
+        },
+        "weapon": {
+            "range": "Attack Range:",
+            "bonus": "Bonus Dice:",
+            "malus": "Malus Dice:",
+            "ammo": "Ammo:"
+        },
+        "attributes": {
+            "str": "Strength",
+            "ref": "Reflex",
+            "int": "Intelligence"
+        },
+        "capattributes": {
+            "str": "STRENGTH",
+            "ref": "REFLEX",
+            "int": "INTELLIGENCE"
+        },
+        "skills": {
+            "perception": "Perception",
+            "athletics": "Athletics",
+            "grapple": "Grapple",
+            "swim": "Swim",
+            "aim": "Aim/Throw",
+            "acrobatics": "Acrobatics",
+            "ride": "Ride/Pilot",
+            "sleight": "Sleight of Hand",
+            "stealth": "Stealth",
+            "deception": "Deception",
+            "persuasion": "Persuasion",
+            "infiltration": "Infiltration",
+            "survival": "Survival"
+        },
+        "combat": "Combat",
+        "roll": "Roll",
+        "cancel": "Cancel",
+        "combatRoll": {
+            "weaponMalus": "Use Weapon Malus Instead?",
+            "diceAdded": "Dice Added",
+            "diceRemoved": "Dice Removed",
+            "destiny": "Use Destiny?",
+            "tokenError": "Must have character token selected.",
+            "armorReduction": "Armor Reduction"
+        },
+        "characterSheet": {
+            "character": "Character",
+            "characterName": "Character Name",
+            "player": "Player",
+            "temperament": "Temperament",
+            "identity": "Identity",
+            "age": "Age",
+            "race": "Race",
+            "height": "Height",
+            "bodyType": "Body Type",
+            "disposition": "Character Disposition",
+            "disabilities": "Disabling Characteristics",
+            "inventory": "Inventory",
+            "weapons": "Weapons",
+            "armor": "Armor",
+            "items": "Items"
+        },
+        "skillBlock": {
+            "attributes": "Attributes",
+            "skills": "Skills",
+            "strength": "Strength Based",
+            "reflex": "Reflex Based",
+            "intelligence": "Intelligence Based"
+        },
+        "assistBlock": {
+            "strBonus": "-1 injury on hit per str",
+            "refBonus": "Higher Turn Priority",
+            "intBonus": "+3 skill points per int",
+            "vocations": "Vocations (Assist Skills)",
+            "proficiencies": "Proficiencies (Combat Applicable)",
+            "injuries": "Injuries",
+            "penalty": "Penalty",
+            "minor": "Minor",
+            "medium": "Medium",
+            "serious": "Serious",
+            "fatal": "Fatal",
+            "commerce": "Commerce Points",
+            "destiny": "Destiny Points"
+        },
+        "bioBlock": {
+            "history": "History",
+            "beliefs": "Beliefs/Morality",
+            "goals": "Goals/Aspirations",
+            "biology": "Biology",
+            "behavior": "Behavior"
+        },
+        "item": {
+            "class": "Class",
+            "default": "New Item"
+        }
+    }
+}

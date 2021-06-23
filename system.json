@@ -1,0 +1,51 @@
+{
+  "name": "cogent",
+  "title": "Cogent",
+  "description": "Cogent Roleplaying System",
+  "version": "0.1.1",
+  "templateVersion": 2,
+  "author": "Limeyhoney",
+  "minimumCoreVersion": "0.7.9",
+  "compatibleCoreVersion": "0.7.9",
+  "esmodules": [
+    "cogent.js"
+  ],
+  "styles": [
+    "styles/cogent.css"
+  ],
+  "packs": [
+    {
+      "name": "macros",
+      "label": "Macros",
+      "system": "cogent",
+      "path": "./packs/macros.db",
+      "entity": "Macro"
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "system": "cogent",
+      "path": "./packs/armor.db",
+      "entity": "Item"
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "system": "cogent",
+      "path": "./packs/weapons.db",
+      "entity": "Item"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "socket": false,
+  "initiative": "-1d6-6*@attributes.ref.value",
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "injuries"
+}

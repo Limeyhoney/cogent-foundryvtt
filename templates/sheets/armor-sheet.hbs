@@ -1,0 +1,19 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div>
+        <table style="border-spacing:15px">
+            <tr>
+                <td>{{localize "cogent.armor"}} {{localize "cogent.item.class"}}:</td>
+            </tr>
+            <tr>
+                <td>
+                    <span>
+                        <input name="data.armor" type="number" value="{{data.armor}}" data-dtype="Number" /> 
+                    </span>  
+                </td>
+        </table>
+        <textarea name="data.description">{{data.description}}</textarea>
+</form>

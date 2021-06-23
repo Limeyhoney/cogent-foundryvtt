@@ -1,0 +1,260 @@
+{
+	"Actor": {
+		"types": ["npc", "character", "monster"],
+		"templates": {
+			"common": {
+				"attributes": {
+					"str": {
+						"value": 0,
+						"max": 4,
+						"malus": false
+					},
+					"ref": {
+						"value": 0,
+						"max": 4,
+						"malus": false
+					},
+					"int": {
+						"value": 0,
+						"max": 4,
+						"malus": false
+					},
+					"cha": {
+						"value": 0,
+						"max": 4,
+						"malus": false
+					}
+				},
+				"skills": {
+					"core": {
+						"perception": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						}
+					},
+					"strength": {
+						"athletics": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"grapple": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"swim": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"aim": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						}
+					},
+					"reflex": {
+						"acrobatics": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"ride": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"sleight": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"stealth": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						}
+					},
+					"intelligence": {
+						"deception": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"persuasion": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"infiltration": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"survival": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"logic": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"history": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						}
+					},
+					"character": {
+						"authority": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"deception": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						"persuasion": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
+						
+						"willpower": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						}
+					}
+				},
+				"injuries": {
+					"minor": 0,
+					"medium": 0,
+					"serious": 0,
+					"fatal": 0,
+					"malus": 0
+				},
+				"combatData": {
+					"weapon": 0,
+					"value": 0,
+					"malus": 0,
+					"attributeTotal": 0,
+					"destiny": false
+				},
+				"inventory": {
+					"weapon": [],
+					"armor": [],
+					"item": []
+				}
+			},
+			"bio" : {
+				"age": "",
+				"race": "",
+				"height": "",
+				"body": "",
+				"disposition": "",
+				"disabilities": "",
+				"history": "",
+				"beliefs": "",
+				"goals": "",
+				"commerce": {
+					"value": 3,
+					"max": 8
+				}
+			},
+			"assist" : {
+				"vocations": {
+					"vocation1": {
+						"vocation": "",
+						"value": 0,
+						"max": 4
+					},
+					"vocation2": {
+						"vocation": "",
+						"value": 0,
+						"max": 4
+					},
+					"vocation3": {
+						"vocation": "",
+						"value": 0,
+						"max": 4
+					}
+				},
+				"proficiencies": {
+					"proficiency1": {
+						"proficiency": "",
+						"value": 0,
+						"max": 2
+					},
+					"proficiency2": {
+						"proficiency": "",
+						"value": 0,
+						"max": 2
+					},
+					"proficiency3": {
+						"proficiency": "",
+						"value": 0,
+						"max": 2
+					}
+				},
+				"extVocations": [],
+				"extProficiencies": []
+			}
+		},
+		"character": {
+			"templates": ["common", "bio", "assist"],
+			"destiny": {
+				"value": 3,
+				"max": 8
+			},
+			"player": ""
+		},
+		"npc": {
+			"templates": ["common", "bio", "assist"],
+			"temperament": ""
+		},
+		"monster": {
+			"templates": ["common", "assist"],
+			"biology": "",
+			"temperament": "",
+			"behavior": "",
+			"attacks": ""
+		}
+	},
+	"Item":{
+		"templates": {
+			"itemDescription": {
+				"description": ""
+			}
+		},
+		"types": ["weapon","armor","misc"],
+		"weapon": {
+			"templates": ["itemDescription"],
+			"range": "",
+			"rangedType": "",
+			"size": "",
+			"speared": false,
+			"hafted": false,
+			"blunt": false,
+			"blade": false,
+			"bonus": 0,
+			"malus": 0,
+			"ammo": -1
+		},
+		"armor": {
+			"templates": ["itemDescription"],
+			"armor": 0
+		},
+		"misc": {
+			"templates": ["itemDescription"],
+			"count": 1,
+			"type": "item"
+		}
+	}
+}

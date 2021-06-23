@@ -1,0 +1,129 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div>
+        <table>
+            <tr>
+                <th>{{localize "cogent.characterSheet.character"}}:</th>
+                <td colspan="2">
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="Character Name"/>
+                </td>
+                <th colspan="4">
+                    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="96" width="96" colspan="2"/>
+                </th>
+                <th>{{#if (eq actor.type "character")}}{{localize "cogent.characterSheet.player"}}:{{/if}}{{#unless (eq actor.type "character")}}{{localize "cogent.characterSheet.temperament"}}:{{/unless}}</th>
+                <td colspan="2">
+                    {{#if (eq actor.type "character")}}
+                    <input name="data.player" type="text" value="{{data.player}}" placeholder="Player"/>
+                    {{/if}}
+                    {{#unless (eq actor.type "character")}}
+                    <input name="data.temperament" type="text" value="{{data.temperament}}" placeholder="Aggressive"/>
+                    {{/unless}}
+                </td>
+            </tr>
+            <tr>
+                <th><i>{{localize "cogent.characterSheet.identity"}}</i></th>
+            </tr>
+            <tr>
+                <th>{{localize "cogent.characterSheet.age"}}:</th>
+                <td>
+                    <input name="data.age" type="text" value="{{data.age}}" placeholder="25 years"/>
+                </td>
+                <th>{{localize "cogent.characterSheet.race"}}:</th>
+                <td>
+                    <input name="data.race" type="text" value="{{data.race}}" placeholder="human"/>
+                </td>
+                <th>{{localize "cogent.characterSheet.height"}}:</th>
+                <td>
+                    <input name="data.height" type="text" value="{{data.height}}" placeholder="5&#39 6&#34"/>
+                </td>
+                <th>{{localize "cogent.characterSheet.bodyType"}}:</th>
+                <td colspan="2">
+                    <input name="data.body" type="text" value="{{data.body}}" placeholder="Humanoid"/>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">{{localize "cogent.characterSheet.disposition"}}:</th>
+                <td colspan="8">
+                    <input name="data.disposition" type="text" value="{{data.disposition}}" placeholder=""/>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">{{localize "cogent.characterSheet.disabilities"}}:</th>
+                <td colspan="8">
+                    <input name="data.disabilities" type="text" value="{{data.disabilities}}" placeholder=""/>
+                </td>
+            </tr>
+        </table>
+        <style>
+            .flex {
+                display:flex;
+                flex-direction:row
+            }
+            .bio {flex:30%}
+            .assist {flex:30%}
+            .skill {flex:40%}
+            .rollable:hover, .rollable:focus {
+                color: #000;
+                text-shadow: 0 0 10px red;
+                cursor: pointer;
+            }
+        </style>
+        <div class="flex">
+            <table class="skill">
+                {{> "systems/cogent/templates/partials/character/skill-block.hbs"}}
+            </table>
+            <table class="assist">
+                {{> "systems/cogent/templates/partials/character/assist-block.hbs"}}
+            </table>
+            <table class="bio">
+                {{#unless (eq actor.type "monster")}}
+                {{> "systems/cogent/templates/partials/character/bio-block.hbs"}}
+                {{/unless}}
+                {{#if (eq actor.type "monster")}}
+                {{> "systems/cogent/templates/partials/character/monster-bio-block.hbs"}}
+                {{/if}}
+            </table>
+        </div>
+        <p>{{localize "cogent.characterSheet.inventory"}}</p>
+        <style>
+            .left {flex:33%}
+            .middle {flex:33%}
+            .right {flex:34%}
+            .inputName {flex:90%}
+            .input {flex:10%}
+            .rightAlign {text-align:right}
+        </style>
+        <div>
+            <table>
+                <tr class="flex" height="20px">
+                    <td class="left">{{localize "cogent.characterSheet.weapons"}}</td>
+                    <td class="middle">{{localize "cogent.characterSheet.armor"}}</td>
+                    <td class="right">
+                        <div class="flex">
+                            <div class="inputName">{{localize "cogent.characterSheet.items"}}</div>
+                            <a class="input">
+                                <i class="fas fa-plus cogent-item-add" data-default="cogent.item.default" data-type="misc" data-class="item"></i>
+                            </a>
+                        </div> 
+                    </td>
+                </tr>
+                <tr class="flex">
+                    <td class="left weaponList">
+                        {{#each data.inventory.weapon as |weapon id|}}
+                        {{> weapon-list weapon}}
+                        {{/each}}
+                    </td>
+                    <td class="middle armorList">
+                        {{#each data.inventory.armor as |armor id|}}
+                        {{> "systems/cogent/templates/partials/character/armor-list.hbs" armor}}
+                        {{/each}}
+                    </td>
+                    <td  class="right itemList">
+                        {{#each data.inventory.items as |items id|}}
+                        {{> "systems/cogent/templates/partials/character/items-list.hbs" items}}
+                        {{/each}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>

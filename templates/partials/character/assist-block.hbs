@@ -1,0 +1,143 @@
+<section>
+    <tr>
+        <td colspan="5">&emsp;</td>
+    </tr>
+    <tr>
+        <td style="font-size:134%" colspan="5">{{localize "cogent.assistBlock.strBonus"}}</td>
+    </tr>
+    <tr>
+        <td style="font-size:134%" colspan="5">{{localize "cogent.assistBlock.refBonus"}}</td>
+    </tr>
+    <tr>
+        <td style="font-size:134%" colspan="5">{{localize "cogent.assistBlock.intBonus"}}</td>
+    </tr>
+    <tr>
+        <td colspan="5">{{localize "cogent.assistBlock.vocations"}}</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input name="data.vocations.vocation1.vocation" type="text" value="{{data.vocations.vocation1.vocation}}" placeholder=""/>
+        </td>
+        <td>
+            <input type="number" name="data.vocations.vocation1.value" value="{{data.vocations.vocation1.value}}" data-dtype="Number" max="4" min="0"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input name="data.vocations.vocation2.vocation" type="text" value="{{data.vocations.vocation2.vocation}}" placeholder=""/>
+        </td>
+        <td>
+            <input type="number" name="data.vocations.vocation2.value" value="{{data.vocations.vocation2.value}}" data-dtype="Number" max="4" min="0"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input name="data.vocations.vocation3.vocation" type="text" value="{{data.vocations.vocation3.vocation}}" placeholder=""/>
+        </td>
+        <td>
+            <input type="number" name="data.vocations.vocation3.value" value="{{data.vocations.vocation3.value}}" data-dtype="Number" max="4" min="0"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">{{localize "cogent.assistBlock.proficiencies"}}</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input name="data.proficiencies.proficiency1.proficiency" type="text" value="{{data.proficiencies.proficiency1.proficiency}}" placeholder=""/>
+        </td>
+        <td>
+            <input type="number" name="data.proficiencies.proficiency1.value" value="{{data.proficiencies.proficiency1.value}}" data-dtype="Number" max="2" min="0"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input name="data.proficiencies.proficiency2.proficiency" type="text" value="{{data.proficiencies.proficiency2.proficiency}}" placeholder=""/>
+        </td>
+        <td>
+            <input type="number" name="data.proficiencies.proficiency2.value" value="{{data.proficiencies.proficiency2.value}}" data-dtype="Number" max="2" min="0"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input name="data.proficiencies.proficiency3.proficiency" type="text" value="{{data.proficiencies.proficiency3.proficiency}}" placeholder=""/>
+        </td>
+        <td>
+            <input type="number" name="data.proficiencies.proficiency3.value" value="{{data.proficiencies.proficiency3.value}}" data-dtype="Number" max="2" min="0"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">{{localize "cogent.assistBlock.injuries"}}</td>
+        <td colspan="2">{{localize "cogent.assistBlock.penalty"}}</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" name="data.injuries.minor" value="{{data.injuries.minor}}" data-dtype="Number" min="0"/>
+        </td>
+        <td colspan="">{{localize "cogent.assistBlock.minor"}}</td>
+        <td>&emsp;&emsp;&emsp;&emsp;</td>
+        <td>
+            <input type="number" name="data.injuries.dminor" value="{{data.injuries.minor}}" data-dtype="Number" readonly="true"/>
+        </td>
+        <td>{{localize "cogent.dice"}}</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" name="data.injuries.medium" value="{{data.injuries.medium}}" data-dtype="Number" min="0"/>
+        </td>
+        <td colspan="">{{localize "cogent.assistBlock.medium"}}</td>
+        <td>&emsp;&emsp;&emsp;&emsp;</td>
+        <td>
+            <input type="number" name="data.injuries.dmedium" value="{{double data.injuries.medium}}" data-dtype="Number" readonly="true"/>
+        </td>
+        <td>{{localize "cogent.dice"}}</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" name="data.injuries.serious" value="{{data.injuries.serious}}" data-dtype="Number" min="0"/>
+        </td>
+        <td colspan="">{{localize "cogent.assistBlock.serious"}}</td>
+        <td>&emsp;&emsp;&emsp;&emsp;</td>
+        <td>
+            <input type="number" name="data.injuries.dserious" value="{{triple data.injuries.serious}}" data-dtype="Number" readonly="true"/>
+        </td>
+        <td>{{localize "cogent.dice"}}</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" name="data.injuries.fatal" value="{{data.injuries.fatal}}" data-dtype="Number" min="0"/>
+        </td>
+        <td colspan="">{{localize "cogent.assistBlock.fatal"}}</td>
+        <td>&emsp;&emsp;&emsp;&emsp;</td>
+        <td>
+            <input type="number" name="data.injuries.dfatal" value="{{quadruple data.injuries.fatal}}" data-dtype="Number" readonly="true"/>
+        </td>
+        <td>{{localize "cogent.dice"}}</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" name="data.injuries.total" value="{{sum4 data.injuries.fatal data.injuries.serious data.injuries.medium data.injuries.minor}}" data-dtype="Number" readonly="true"/>
+        </td>
+        <td colspan="">{{localize "cogent.total"}}</td>
+        <td>&emsp;&emsp;&emsp;&emsp;</td>
+        <td>
+            <input type="number" name="data.injuries.malus" value="{{data.injuries.malus}}" data-dtype="Number" readonly="true"/>
+        </td>
+        <td>{{localize "cogent.dice"}}</td>
+    </tr>
+    {{#unless (eq actor.type "monster")}}
+    <tr>
+        <td colspan="5">{{localize "cogent.assistBlock.commerce"}}</td>
+    </tr>
+    <tr>
+        <td colspan="5"><input type="number" name="data.commerce.value" value="{{data.commerce.value}}" data-dtype="Number" min="0"/></td>
+    </tr>
+    {{#if (eq actor.type "character")}}
+    <tr>
+        <td colspan="5">{{localize "cogent.assistBlock.destiny"}}</td>
+    </tr>
+    <tr>
+        <td colspan="5"><input type="number" name="data.destiny.value" value="{{data.destiny.value}}" data-dtype="Number" min="0"/></td>
+    </tr>
+    {{/if}}
+    {{/unless}}
+</section>
