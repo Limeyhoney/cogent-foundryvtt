@@ -1,5 +1,5 @@
 # Cogent System for FoundryVTT
-0.1.1
+Version 0.1.1
 
 For Cogent Version Alpha v1.2.1
 
