@@ -34,6 +34,11 @@
 						}
 					},
 					"strength": {
+						"endurance": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
 						"athletics": {
 							"value": 0,
 							"max": 4,
@@ -56,6 +61,11 @@
 						}
 					},
 					"reflex": {
+						"perception": {
+							"value": 0,
+							"max": 4,
+							"malus": false
+						},
 						"acrobatics": {
 							"value": 0,
 							"max": 4,
@@ -172,18 +182,93 @@
 				"vocations": {
 					"vocation1": {
 						"vocation": "",
-						"value": 0,
-						"max": 4
+						"value": 1,
+						"max": 4,
+						"attribute": "",
+						"skill1": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill2": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill3": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill4": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						}
 					},
 					"vocation2": {
 						"vocation": "",
 						"value": 0,
-						"max": 4
+						"max": 4,
+						"attribute": "",
+						"skill1": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill2": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill3": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill4": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						}
 					},
 					"vocation3": {
 						"vocation": "",
 						"value": 0,
-						"max": 4
+						"max": 4,
+						"attribute": "",
+						"skill1": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill2": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill3": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						},
+						"skill4": {
+							"value": 0,
+							"max": 4,
+							"attribute": "",
+							"name": ""
+						}
 					}
 				},
 				"proficiencies": {
