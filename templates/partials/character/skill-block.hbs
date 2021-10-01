@@ -3,186 +3,156 @@
         <th>
             <i>{{localize "cogent.skillBlock.attributes"}}</i>
         </th>
+        <th/>
     </tr>
     <tr>
         <th class="cogent-aroll rollable" title="Roll Strength Check" data-value="{{data.attributes.str.value}}" data-malus="{{data.attributes.str.malus}}" data-skill="cogent.attributes.str">{{localize "cogent.capattributes.str"}}:</th>
-        <td>
-            <input type="checkbox" name="data.attributes.str.malus" {{checked data.attributes.str.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.attributes.str.value" value="{{data.attributes.str.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.attributes.str.value" value="{{data.attributes.str.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <th class="cogent-aroll rollable" title="Roll Reflex Check" data-value="{{data.attributes.ref.value}}" data-malus="{{data.attributes.ref.malus}}" data-skill="cogent.attributes.ref">{{localize "cogent.capattributes.ref"}}:</th>
-        <td>
-            <input type="checkbox" name="data.attributes.ref.malus" {{checked data.attributes.ref.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.attributes.ref.value" value="{{data.attributes.ref.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.attributes.ref.value" value="{{data.attributes.ref.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <th class="cogent-aroll rollable" title="Roll Intelligence Check" data-value="{{data.attributes.int.value}}" data-malus="{{data.attributes.int.malus}}" data-skill="cogent.attributes.int">{{localize "cogent.capattributes.int"}}:</th>
-        <td>
-            <input type="checkbox" name="data.attributes.int.malus" {{checked data.attributes.int.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.attributes.int.value" value="{{data.attributes.int.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.attributes.int.value" value="{{data.attributes.int.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td><b>{{localize "cogent.skillBlock.skills"}}</b></td>
     </tr>
     <tr>
-        <td class="cogent-proll rollable" title="Roll Perception Check" data-skill="cogent.skills.perception" 
-        data-value="{{data.skills.core.perception.value}}" data-malus="{{data.skills.core.perception.malus}}">{{localize "cogent.skills.perception"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.core.perception.malus" {{checked data.skills.core.perception.malus}} title="Malused?"/> 
-        </td>
-        <td colspan="3">
-            <input type="number" name="data.skills.core.perception.value" value="{{data.skills.core.perception.value}}" data-dtype="Number" max="4" min="0"/>
-        </td>
+        <td><i>{{localize "cogent.skillBlock.strength"}}</i></td>
     </tr>
     <tr>
-        <td><i>{{localize "cogent.skillBlock.strength"}}</i></td>
+        <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.endurance" 
+        data-value="{{data.skills.strength.endurance.value}}" data-malus="{{data.skills.endurance.athletics.malus}}" 
+        data-pvalue="{{data.attributes.str.value}}" data-pmalus="{{data.attributes.str.malus}}">{{localize "cogent.skills.endurance"}}:</td>
+        <td colspan="3">
+            <input type="number" name="data.skills.strength.endurance.value" value="{{data.skills.strength.endurance.value}}" data-dtype="Number" max="4" min="-1"/>
+        </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.athletics" 
         data-value="{{data.skills.strength.athletics.value}}" data-malus="{{data.skills.strength.athletics.malus}}" 
         data-pvalue="{{data.attributes.str.value}}" data-pmalus="{{data.attributes.str.malus}}">{{localize "cogent.skills.athletics"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.strength.athletics.malus" {{checked data.skills.strength.athletics.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.strength.athletics.value" value="{{data.skills.strength.athletics.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.strength.athletics.value" value="{{data.skills.strength.athletics.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.grapple" 
         data-value="{{data.skills.strength.grapple.value}}" data-malus="{{data.skills.strength.grapple.malus}}" 
         data-pvalue="{{data.attributes.str.value}}" data-pmalus="{{data.attributes.str.malus}}">{{localize "cogent.skills.grapple"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.strength.grapple.malus" {{checked data.skills.strength.grapple.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.strength.grapple.value" value="{{data.skills.strength.grapple.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.strength.grapple.value" value="{{data.skills.strength.grapple.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.swim" 
         data-value="{{data.skills.strength.swim.value}}" data-malus="{{data.skills.strength.swim.malus}}" 
         data-pvalue="{{data.attributes.str.value}}" data-pmalus="{{data.attributes.str.malus}}">{{localize "cogent.skills.swim"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.strength.swim.malus" {{checked data.skills.strength.swim.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.strength.swim.value" value="{{data.skills.strength.swim.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.strength.swim.value" value="{{data.skills.strength.swim.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.aim" 
         data-value="{{data.skills.strength.aim.value}}" data-malus="{{data.skills.strength.aim.malus}}" 
         data-pvalue="{{data.attributes.str.value}}" data-pmalus="{{data.attributes.str.malus}}">{{localize "cogent.skills.aim"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.strength.aim.malus" {{checked data.skills.strength.aim.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.strength.aim.value" value="{{data.skills.strength.aim.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.strength.aim.value" value="{{data.skills.strength.aim.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td><i>{{localize "cogent.skillBlock.reflex"}}</i></td>
     </tr>
     <tr>
+        <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.perception" 
+        data-value="{{data.skills.reflex.perception.value}}" data-malus="{{data.skills.reflex.perception.malus}}" 
+        data-pvalue="{{data.attributes.ref.value}}" data-pmalus="{{data.attributes.ref.malus}}">{{localize "cogent.skills.perception"}}:</td>
+        <td colspan="3">
+            <input type="number" name="data.skills.reflex.perception.value" value="{{data.skills.reflex.perception.value}}" data-dtype="Number" max="4" min="-1"/>
+        </td>
+    </tr>
+    <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.acrobatics" 
         data-value="{{data.skills.reflex.acrobatics.value}}" data-malus="{{data.skills.reflex.acrobatics.malus}}" 
         data-pvalue="{{data.attributes.ref.value}}" data-pmalus="{{data.attributes.ref.malus}}">{{localize "cogent.skills.acrobatics"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.reflex.acrobatics.malus" {{checked data.skills.reflex.acrobatics.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.reflex.acrobatics.value" value="{{data.skills.reflex.acrobatics.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.reflex.acrobatics.value" value="{{data.skills.reflex.acrobatics.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.ride" 
         data-value="{{data.skills.reflex.ride.value}}" data-malus="{{data.skills.reflex.ride.malus}}" 
         data-pvalue="{{data.attributes.ref.value}}" data-pmalus="{{data.attributes.ref.malus}}">{{localize "cogent.skills.ride"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.reflex.ride.malus" {{checked data.skills.reflex.ride.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.reflex.ride.value" value="{{data.skills.reflex.ride.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.reflex.ride.value" value="{{data.skills.reflex.ride.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.sleight" 
         data-value="{{data.skills.reflex.sleight.value}}" data-malus="{{data.skills.reflex.sleight.malus}}" 
         data-pvalue="{{data.attributes.ref.value}}" data-pmalus="{{data.attributes.ref.malus}}">{{localize "cogent.skills.sleight"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.reflex.sleight.malus" {{checked data.skills.reflex.sleight.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.reflex.sleight.value" value="{{data.skills.reflex.sleight.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.reflex.sleight.value" value="{{data.skills.reflex.sleight.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.stealth" 
         data-value="{{data.skills.reflex.stealth.value}}" data-malus="{{data.skills.reflex.stealth.malus}}" 
         data-pvalue="{{data.attributes.ref.value}}" data-pmalus="{{data.attributes.ref.malus}}">{{localize "cogent.skills.stealth"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.reflex.stealth.malus" {{checked data.skills.reflex.stealth.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.reflex.stealth.value" value="{{data.skills.reflex.stealth.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.reflex.stealth.value" value="{{data.skills.reflex.stealth.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td colspan="2"><i>{{localize "cogent.skillBlock.intelligence"}}</i></td>
     </tr>
     <tr>
-        <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.deception" 
-        data-value="{{data.skills.intelligence.deception.value}}" data-malus="{{data.skills.intelligence.deception.malus}}" 
-        data-pvalue="{{data.attributes.int.value}}" data-pmalus="{{data.attributes.int.value}}">{{localize "cogent.skills.deception"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.intelligence.deception.malus" {{checked data.skills.intelligence.deception.malus}} title="Malused?"/> 
-        </td>
+        <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.history" 
+        data-value="{{data.skills.intelligence.history.value}}" data-malus="{{data.skills.intelligence.history.malus}}" 
+        data-pvalue="{{data.attributes.int.value}}" data-pmalus="{{data.attributes.int.value}}">{{localize "cogent.skills.history"}}:</td>
         <td colspan="3">
-            <input type="number" name="data.skills.intelligence.deception.value" value="{{data.skills.intelligence.deception.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.intelligence.history.value" value="{{data.skills.intelligence.history.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
-        <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.persuasion" 
-        data-value="{{data.skills.intelligence.persuasion.value}}" data-malus="{{data.skills.intelligence.persuasion.malus}}" 
-        data-pvalue="{{data.attributes.int.value}}" data-pmalus="{{data.attributes.int.value}}">{{localize "cogent.skills.persuasion"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.intelligence.persuasion.malus" {{checked data.skills.intelligence.persuasion.malus}} title="Malused?"/> 
-        </td>
+        <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.deception" 
+        data-value="{{data.skills.intelligence.deception.value}}" data-malus="{{data.skills.intelligence.deception.malus}}" 
+        data-pvalue="{{data.attributes.int.value}}" data-pmalus="{{data.attributes.int.value}}">{{localize "cogent.skills.deception"}}:</td>
         <td colspan="3">
-            <input type="number" name="data.skills.intelligence.persuasion.value" value="{{data.skills.intelligence.persuasion.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.intelligence.deception.value" value="{{data.skills.intelligence.deception.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.infiltration" 
         data-value="{{data.skills.intelligence.infiltration.value}}" data-malus="{{data.skills.intelligence.infiltration.malus}}" 
         data-pvalue="{{data.attributes.int.value}}" data-pmalus="{{data.attributes.int.value}}">{{localize "cogent.skills.infiltration"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.intelligence.infiltration.malus" {{checked data.skills.intelligence.infiltration.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.intelligence.infiltration.value" value="{{data.skills.intelligence.infiltration.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.intelligence.infiltration.value" value="{{data.skills.intelligence.infiltration.value}}" data-dtype="Number" max="4" min="-1"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.persuasion" 
+        data-value="{{data.skills.intelligence.persuasion.value}}" data-malus="{{data.skills.intelligence.persuasion.malus}}" 
+        data-pvalue="{{data.attributes.int.value}}" data-pmalus="{{data.attributes.int.value}}">{{localize "cogent.skills.persuasion"}}:</td>
+        <td colspan="3">
+            <input type="number" name="data.skills.intelligence.persuasion.value" value="{{data.skills.intelligence.persuasion.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
     <tr>
         <td class="cogent-sroll rollable" title="Roll skill Check" data-skill="cogent.skills.survival" 
         data-value="{{data.skills.intelligence.survival.value}}" data-malus="{{data.skills.intelligence.survival.malus}}" 
         data-pvalue="{{data.attributes.int.value}}" data-pmalus="{{data.attributes.int.value}}">{{localize "cogent.skills.survival"}}:</td>
-        <td>
-            <input type="checkbox" name="data.skills.intelligence.survival.malus" {{checked data.skills.intelligence.survival.malus}} title="Malused?"/> 
-        </td>
         <td colspan="3">
-            <input type="number" name="data.skills.intelligence.survival.value" value="{{data.skills.intelligence.survival.value}}" data-dtype="Number" max="4" min="0"/>
+            <input type="number" name="data.skills.intelligence.survival.value" value="{{data.skills.intelligence.survival.value}}" data-dtype="Number" max="4" min="-1"/>
         </td>
     </tr>
 </section>

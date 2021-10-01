@@ -12,6 +12,7 @@ export default class cogentCharacterSheet extends ActorSheet {
         data.data.inventory.weapon = data.items.filter(function(item) {return item.type == "weapon"})
         data.data.inventory.armor = data.items.filter(function(item) {return item.type == "armor"})
         data.data.inventory.items = data.items.filter(function(item) {return item.data.type == "item"})
+        data.config = CONFIG.cogent;
         return data;
     }
     activateListeners(html) {

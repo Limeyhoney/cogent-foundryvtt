@@ -6,6 +6,7 @@
         "malus": "Malus",
         "armor": "Armor",
         "amount": "Amount",
+        "vscombat": "CBT",
         "attackRange": {
             "none": " ",
             "ranged": "Ranged",
@@ -27,12 +28,17 @@
             "ref": "REFLEX",
             "int": "INTELLIGENCE"
         },
+        "shortattributes": {
+            "str": "STR",
+            "ref": "REF",
+            "int": "INT"
+        },
         "skills": {
             "perception": "Perception",
             "athletics": "Athletics",
-            "grapple": "Grapple",
+            "grapple": "Grip",
             "swim": "Swim",
-            "aim": "Aim/Throw",
+            "aim": "Throw",
             "acrobatics": "Acrobatics",
             "ride": "Ride/Pilot",
             "sleight": "Sleight of Hand",
@@ -40,7 +46,9 @@
             "deception": "Deception",
             "persuasion": "Persuasion",
             "infiltration": "Infiltration",
-            "survival": "Survival"
+            "survival": "Survival",
+            "history": "General Knowledge",
+            "endurance": "Endurance"
         },
         "combat": "Combat",
         "roll": "Roll",
@@ -78,9 +86,9 @@
             "intelligence": "Intelligence Based"
         },
         "assistBlock": {
-            "strBonus": "-1 injury on hit per str",
-            "refBonus": "Higher Turn Priority",
-            "intBonus": "+3 skill points per int",
+            "strBonus": "-1 injury once per combat per strength",
+            "refBonus": "+1 turn priotity per reflex point",
+            "intBonus": "+3 skill points per intelligence point",
             "vocations": "Vocations (Assist Skills)",
             "proficiencies": "Proficiencies (Combat Applicable)",
             "injuries": "Injuries",
