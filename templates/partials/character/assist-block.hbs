@@ -21,56 +21,56 @@
     </tr>
     <tr>
         <td>
-            <input type="number" name="data.injuries.minor" value="{{data.injuries.minor}}" data-dtype="Number" min="0"/>
+            <input type="number" name="data.injuries.minor" value="{{data.data.injuries.minor}}" data-dtype="Number" min="0"/>
         </td>
         <td colspan="">{{localize "cogent.assistBlock.minor"}}</td>
         <td>&emsp;&emsp;&emsp;&emsp;</td>
         <td>
-            <input type="number" name="data.injuries.dminor" value="{{data.injuries.minor}}" data-dtype="Number" readonly="true"/>
+            <input type="number" name="data.injuries.dminor" value="{{data.data.injuries.minor}}" data-dtype="Number" readonly="true"/>
         </td>
         <td>{{localize "cogent.dice"}}</td>
     </tr>
     <tr>
         <td>
-            <input type="number" name="data.injuries.medium" value="{{data.injuries.medium}}" data-dtype="Number" min="0"/>
+            <input type="number" name="data.injuries.medium" value="{{data.data.injuries.medium}}" data-dtype="Number" min="0"/>
         </td>
         <td colspan="">{{localize "cogent.assistBlock.medium"}}</td>
         <td>&emsp;&emsp;&emsp;&emsp;</td>
         <td>
-            <input type="number" name="data.injuries.dmedium" value="{{double data.injuries.medium}}" data-dtype="Number" readonly="true"/>
+            <input type="number" name="data.injuries.dmedium" value="{{double data.data.injuries.medium}}" data-dtype="Number" readonly="true"/>
         </td>
         <td>{{localize "cogent.dice"}}</td>
     </tr>
     <tr>
         <td>
-            <input type="number" name="data.injuries.serious" value="{{data.injuries.serious}}" data-dtype="Number" min="0"/>
+            <input type="number" name="data.injuries.serious" value="{{data.data.injuries.serious}}" data-dtype="Number" min="0"/>
         </td>
         <td colspan="">{{localize "cogent.assistBlock.serious"}}</td>
         <td>&emsp;&emsp;&emsp;&emsp;</td>
         <td>
-            <input type="number" name="data.injuries.dserious" value="{{triple data.injuries.serious}}" data-dtype="Number" readonly="true"/>
+            <input type="number" name="data.injuries.dserious" value="{{triple data.data.injuries.serious}}" data-dtype="Number" readonly="true"/>
         </td>
         <td>{{localize "cogent.dice"}}</td>
     </tr>
     <tr>
         <td>
-            <input type="number" name="data.injuries.fatal" value="{{data.injuries.fatal}}" data-dtype="Number" min="0"/>
+            <input type="number" name="data.injuries.fatal" value="{{data.data.injuries.fatal}}" data-dtype="Number" min="0"/>
         </td>
         <td colspan="">{{localize "cogent.assistBlock.fatal"}}</td>
         <td>&emsp;&emsp;&emsp;&emsp;</td>
         <td>
-            <input type="number" name="data.injuries.dfatal" value="{{quadruple data.injuries.fatal}}" data-dtype="Number" readonly="true"/>
+            <input type="number" name="data.injuries.dfatal" value="{{quadruple data.data.injuries.fatal}}" data-dtype="Number" readonly="true"/>
         </td>
         <td>{{localize "cogent.dice"}}</td>
     </tr>
     <tr>
         <td>
-            <input type="number" name="data.injuries.total" value="{{sum4 data.injuries.fatal data.injuries.serious data.injuries.medium data.injuries.minor}}" data-dtype="Number" readonly="true"/>
+            <input type="number" name="data.injuries.total" value="{{sum4 data.data.injuries.fatal data.data.injuries.serious data.data.injuries.medium data.data.injuries.minor}}" data-dtype="Number" readonly="true"/>
         </td>
         <td colspan="">{{localize "cogent.total"}}</td>
         <td>&emsp;&emsp;&emsp;&emsp;</td>
         <td>
-            <input type="number" name="data.injuries.malus" value="{{data.injuries.malus}}" data-dtype="Number" readonly="true"/>
+            <input type="number" name="data.injuries.malus" value="{{data.data.injuries.malus}}" data-dtype="Number" readonly="true"/>
         </td>
         <td>{{localize "cogent.dice"}}</td>
     </tr>
@@ -79,14 +79,14 @@
         <td colspan="5">{{localize "cogent.assistBlock.commerce"}}</td>
     </tr>
     <tr>
-        <td colspan="5"><input type="number" name="data.commerce.value" value="{{data.commerce.value}}" data-dtype="Number" min="0"/></td>
+        <td colspan="5"><input type="number" name="data.commerce.value" value="{{data.data.commerce.value}}" data-dtype="Number" min="0"/></td>
     </tr>
     {{#if (eq actor.type "character")}}
     <tr>
         <td colspan="5">{{localize "cogent.assistBlock.destiny"}}</td>
     </tr>
     <tr>
-        <td colspan="5"><input type="number" name="data.destiny.value" value="{{data.destiny.value}}" data-dtype="Number" min="0"/></td>
+        <td colspan="5"><input type="number" name="data.destiny.value" value="{{data.data.destiny.value}}" data-dtype="Number" min="0"/></td>
     </tr>
     {{/if}}
     {{/unless}}

@@ -2,11 +2,11 @@
   "name": "cogent",
   "title": "Cogent",
   "description": "Cogent Roleplaying System",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "templateVersion": 2,
   "author": "Limeyhoney",
-  "minimumCoreVersion": "0.7.9",
-  "compatibleCoreVersion": "0.7.9",
+  "minimumCoreVersion": "0.8.9",
+  "compatibleCoreVersion": "0.8.9",
   "esmodules": [
     "cogent.js"
   ],

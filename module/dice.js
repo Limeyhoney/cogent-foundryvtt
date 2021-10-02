@@ -1,5 +1,5 @@
 export function rollCheck({actorData = null, skillTotal = null, destiny = false, title = "", additional = ""} = {}) {
-    let rollForumla = "@num d6cs>=@min";
+    let rollForumla = "(@num)d6cs>=@min";
     let minimum = 4;
     if (destiny == true && actorData.destiny.value > 0) {
         minimum = 3;
@@ -12,6 +12,7 @@ export function rollCheck({actorData = null, skillTotal = null, destiny = false,
         num: skillTotal,
         min: minimum
     };
+    console.log(rollData.num);
     let messageData = {
         speaker: ChatMessage.getSpeaker(),
         flavor: game.i18n.localize(title) + " " + game.i18n.localize("cogent.roll") + additional

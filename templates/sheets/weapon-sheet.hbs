@@ -14,7 +14,7 @@
             <tr>
                 <td>
                     <select name="data.range">
-                        {{#select data.range}}
+                        {{#select data.data.range}}
                         {{#each config.attackRange as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -23,22 +23,22 @@
                 </td>
                 <td>
                     <span>
-                        <input name="data.bonus" type="number" value="{{data.bonus}}" data-dtype="Number" /> 
+                        <input name="data.bonus" type="number" value="{{data.data.bonus}}" data-dtype="Number" /> 
                     </span>  
                 </td>
                 <th>{{localize "cogent.dice"}}&emsp;&emsp;</th>
                 <td>
                     <span>
-                        <input name="data.malus" type="number" value="{{data.malus}}" data-dtype="Number" /> 
+                        <input name="data.malus" type="number" value="{{data.data.malus}}" data-dtype="Number" /> 
                     </span>  
                 </td>
                 <th>{{localize "cogent.dice"}}&emsp;&emsp;</th>
                 <td>
                     <span>
-                        <input name="data.ammo" type="number" value="{{data.ammo}}" data-dtype="Number" /> 
+                        <input name="data.ammo" type="number" value="{{data.data.ammo}}" data-dtype="Number" /> 
                     </span>     
                 </td>
             </tr>
         </table>
-        <textarea name="data.description">{{data.description}}</textarea>
+        <textarea name="data.description">{{data.data.description}}</textarea>
 </form>

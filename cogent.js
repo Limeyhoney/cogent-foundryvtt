@@ -22,7 +22,7 @@ Hooks.once("init", function() {
     console.log("Cogent | Initialising Cogent Roleplay System");
 
     CONFIG.cogent = cogent;
-    CONFIG.Actor.entityClass = cogentActor;
+    CONFIG.Actor.documentClass = cogentActor;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("cogent", cogentItemSheet, { makeDefault: true });

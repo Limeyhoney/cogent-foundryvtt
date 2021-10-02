@@ -12,10 +12,10 @@
                 <th>{{#if (eq actor.type "character")}}{{localize "cogent.characterSheet.player"}}:{{/if}}{{#unless (eq actor.type "character")}}{{localize "cogent.characterSheet.temperament"}}:{{/unless}}</th>
                 <td colspan="2">
                     {{#if (eq actor.type "character")}}
-                    <input name="data.player" type="text" value="{{data.player}}" placeholder="Player"/>
+                    <input name="data.player" type="text" value="{{data.data.player}}" placeholder="Player"/>
                     {{/if}}
                     {{#unless (eq actor.type "character")}}
-                    <input name="data.temperament" type="text" value="{{data.temperament}}" placeholder="Aggressive"/>
+                    <input name="data.temperament" type="text" value="{{data.data.temperament}}" placeholder="Aggressive"/>
                     {{/unless}}
                 </td>
             </tr>
@@ -25,31 +25,31 @@
             <tr>
                 <th>{{localize "cogent.characterSheet.age"}}:</th>
                 <td>
-                    <input name="data.age" type="text" value="{{data.age}}" placeholder="25 years"/>
+                    <input name="data.age" type="text" value="{{data.data.age}}" placeholder="25 years"/>
                 </td>
                 <th>{{localize "cogent.characterSheet.race"}}:</th>
                 <td>
-                    <input name="data.race" type="text" value="{{data.race}}" placeholder="human"/>
+                    <input name="data.race" type="text" value="{{data.data.race}}" placeholder="human"/>
                 </td>
                 <th>{{localize "cogent.characterSheet.height"}}:</th>
                 <td>
-                    <input name="data.height" type="text" value="{{data.height}}" placeholder="5&#39 6&#34"/>
+                    <input name="data.height" type="text" value="{{data.data.height}}" placeholder="5&#39 6&#34"/>
                 </td>
                 <th>{{localize "cogent.characterSheet.bodyType"}}:</th>
                 <td colspan="2">
-                    <input name="data.body" type="text" value="{{data.body}}" placeholder="Humanoid"/>
+                    <input name="data.body" type="text" value="{{data.data.body}}" placeholder="Humanoid"/>
                 </td>
             </tr>
             <tr>
                 <th colspan="2">{{localize "cogent.characterSheet.disposition"}}:</th>
                 <td colspan="8">
-                    <input name="data.disposition" type="text" value="{{data.disposition}}" placeholder=""/>
+                    <input name="data.disposition" type="text" value="{{data.data.disposition}}" placeholder=""/>
                 </td>
             </tr>
             <tr>
                 <th colspan="2">{{localize "cogent.characterSheet.disabilities"}}:</th>
                 <td colspan="8">
-                    <input name="data.disabilities" type="text" value="{{data.disabilities}}" placeholder=""/>
+                    <input name="data.disabilities" type="text" value="{{data.data.disabilities}}" placeholder=""/>
                 </td>
             </tr>
         </table>
@@ -110,17 +110,17 @@
                 </tr>
                 <tr class="flex">
                     <td class="left weaponList">
-                        {{#each data.inventory.weapon as |weapon id|}}
+                        {{#each data.data.inventory.weapon as |weapon id|}}
                         {{> weapon-list weapon}}
                         {{/each}}
                     </td>
                     <td class="middle armorList">
-                        {{#each data.inventory.armor as |armor id|}}
+                        {{#each data.data.inventory.armor as |armor id|}}
                         {{> "systems/cogent/templates/partials/character/armor-list.hbs" armor}}
                         {{/each}}
                     </td>
                     <td  class="right itemList">
-                        {{#each data.inventory.items as |items id|}}
+                        {{#each data.data.inventory.items as |items id|}}
                         {{> "systems/cogent/templates/partials/character/items-list.hbs" items}}
                         {{/each}}
                     </td>
