@@ -7,23 +7,38 @@ cogent.attackRange = {
 }
 
 cogent.vocationAttribute = {
-    none: "",
-    str: "cogent.attributes.str",
-    ref: "cogent.attributes.ref",
-    int: "cogent.attributes.int"
+    NAN: "",
+    STR: "cogent.attributes.str",
+    REF: "cogent.attributes.ref",
+    INT: "cogent.attributes.int"
 }
 
 cogent.vsAttribute = {
-    none: "",
-    str: "cogent.shortattributes.str",
-    ref: "cogent.shortattributes.ref",
-    int: "cogent.shortattributes.int",
-    cbt: "cogent.vscombat"
+    NAN: "",
+    STR: "cogent.shortattributes.str",
+    REF: "cogent.shortattributes.ref",
+    INT: "cogent.shortattributes.int",
+    CBT: "cogent.vscombat"
 }
 
 cogent.miscItems = {
     none: "",
     vocation: "extCogent.vocation.vocation",
-    vskill: "extCogent.vocation.skill"
 }
 
+cogent.extvocationAttribute = {
+    NAN: "",
+    STR: "cogent.attributes.str",
+    REF: "cogent.attributes.ref",
+    INT: "cogent.attributes.int",
+    CHA: "extCogent.attributes.cha"
+}
+
+cogent.extvsAttribute = {
+    NAN: "",
+    STR: "cogent.shortattributes.str",
+    REF: "cogent.shortattributes.ref",
+    INT: "cogent.shortattributes.int",
+    CHA: "extCogent.shortattributes.cha",
+    CBT: "cogent.vscombat"
+}

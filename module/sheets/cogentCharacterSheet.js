@@ -17,7 +17,6 @@ export default class cogentCharacterSheet extends ActorSheet {
     }
     activateListeners(html) {
         html.find(".cogent-aroll").click(this._cogentAttributeRoll.bind(this));
-        html.find(".cogent-proll").click(this._cogentPerceptionRoll.bind(this));
         html.find(".cogent-sroll").click(this._cogentSkillRoll.bind(this));
         html.find(".cogent-croll").click(this._cogentSheetCombatRoll.bind(this));
         html.find(".cogent-acroll").click(this._cogentAdvCombatRoll.bind(this));
@@ -43,27 +42,8 @@ export default class cogentCharacterSheet extends ActorSheet {
         });
         super._render(false, this);
     }
-    _cogentPerceptionRoll(event) {
-        let actorDataData=this.actor.data.data
-        let base = 3+actorDataData.attributes.str.value+actorDataData.attributes.ref.value+actorDataData.attributes.int.value+actorDataData.attributes.cha.value+parseInt(event.currentTarget.dataset.value);
-        if (event.currentTarget.dataset.malus == "true") {base--;};
-        if (actorDataData.attributes.str.malus == "true") {base--;};
-        if (actorDataData.attributes.ref.malus == "true") {base--;};
-        if (actorDataData.attributes.int.malus == "true") {base--;};
-        if (actorDataData.attributes.cha.malus == "true") {base--;};
-        Dice.rollCheck({
-            actorData: actorDataData,
-            skillTotal: base,
-            destiny: event.shiftKey,
-            title: event.currentTarget.dataset.skill,
-            additional: ""
-        });
-        super._render(false, this);
-    }
     _cogentSkillRoll(event) {
         let base = 3+parseInt(event.currentTarget.dataset.value)+parseInt(event.currentTarget.dataset.pvalue);
-        if (event.currentTarget.dataset.malus == "true") {base--;};
-        if (event.currentTarget.dataset.pmalus == "true") {base--;};
         Dice.rollCheck({
             actorData: this.actor.data.data,
             skillTotal: base,
@@ -228,7 +208,6 @@ export default class cogentCharacterSheet extends ActorSheet {
     _cogentItemRemove(event) {
         event.preventDefault();
         let Id = event.currentTarget.dataset.id;
-        console.log(Id);
         this.actor.deleteEmbeddedEntity("OwnedItem", Id);
     }
     _cogentItemCreate(event) {
@@ -248,7 +227,6 @@ export default class cogentCharacterSheet extends ActorSheet {
         let Id = element.dataset.id;
         let item = this.actor.getOwnedItem(Id);
         let field = element.dataset.field;
-        console.log(field)
 
         return item.update({ [field]: element.value});
     }

@@ -89,7 +89,7 @@
             "strBonus": "-1 injury once per combat per strength",
             "refBonus": "+1 turn priotity per reflex point",
             "intBonus": "+3 skill points per intelligence point",
-            "vocations": "Vocations (Assist Skills)",
+            "vocations": "Vocations",
             "proficiencies": "Proficiencies (Combat Applicable)",
             "injuries": "Injuries",
             "penalty": "Penalty",
