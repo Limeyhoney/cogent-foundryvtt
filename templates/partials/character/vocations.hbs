@@ -4,11 +4,11 @@
             <table>
                 <tr>
                     <td colspan="2">
-                        <input name="data.vocations.vocation1.vocation" type="text" value="{{data.vocations.vocation1.vocation}}" placeholder=""/>
+                        <input name="data.vocations.vocation1.vocation" type="text" value="{{data.data.vocations.vocation1.vocation}}" placeholder=""/>
                     </td>
                     <td colspan="2">
                         <select name="data.vocations.vocation1.attribute">
-                        {{#select data.vocations.vocation1.attribute}}
+                        {{#select data.data.vocations.vocation1.attribute}}
                         {{#each config.vocationAttribute as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -16,7 +16,7 @@
                         </select>
                     </td>
                     <td>
-                        <input type="number" name="data.vocations.vocation1.value" value="{{data.vocations.vocation1.value}}" data-dtype="Number" max="4" min="0"/>
+                        <input type="number" name="data.vocations.vocation1.value" value="{{data.data.vocations.vocation1.value}}" data-dtype="Number" max="4" min="0"/>
                     </td>
                 </tr>
                 <tr>
@@ -27,14 +27,14 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input type="number" name="data.vocations.vocation1.skill1.value" value="{{data.vocations.vocation1.skill1.value}}" data-dtype="Number" max="{{data.vocations.vocation1.value}}" min="0"/>
+                                    <input type="number" name="data.vocations.vocation1.skill1.value" value="{{data.data.vocations.vocation1.skill1.value}}" data-dtype="Number" max="{{data.data.vocations.vocation1.value}}" min="0"/>
                                 </td>
                                 <td colspan="4">
-                                    <input name="data.vocations.vocation1.skill1.name" type="text" value="{{data.vocations.vocation1.skill1.name}}" placeholder=""/>
+                                    <input name="data.vocations.vocation1.skill1.name" type="text" value="{{data.data.vocations.vocation1.skill1.name}}" placeholder=""/>
                                 </td>
                                     <td>
                                     <select name="data.vocations.vocation1.skill1.attribute">
-                                    {{#select data.vocations.vocation1.skill1.attribute}}
+                                    {{#select data.data.vocations.vocation1.skill1.attribute}}
                                     {{#each config.vsAttribute as |name type|}}
                                     <option value="{{type}}">{{localize name}}</option>
                                     {{/each}}
@@ -44,14 +44,14 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="number" name="data.vocations.vocation1.skill3.value" value="{{data.vocations.vocation1.skill3.value}}" data-dtype="Number" max="{{data.vocations.vocation1.value}}" min="0"/>
+                                    <input type="number" name="data.vocations.vocation1.skill3.value" value="{{data.data.vocations.vocation1.skill3.value}}" data-dtype="Number" max="{{data.data.vocations.vocation1.value}}" min="0"/>
                                 </td>
                                 <td colspan="4">
-                                    <input name="data.vocations.vocation1.skill3.name" type="text" value="{{data.vocations.vocation1.skill3.name}}" placeholder=""/>
+                                    <input name="data.vocations.vocation1.skill3.name" type="text" value="{{data.data.vocations.vocation1.skill3.name}}" placeholder=""/>
                                 </td>
                                     <td>
                                     <select name="data.vocations.vocation1.skill3.attribute">
-                                    {{#select data.vocations.vocation1.skill3.attribute}}
+                                    {{#select data.data.vocations.vocation1.skill3.attribute}}
                                     {{#each config.vsAttribute as |name type|}}
                                     <option value="{{type}}">{{localize name}}</option>
                                     {{/each}}
@@ -65,14 +65,14 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input type="number" name="data.vocations.vocation1.skill2.value" value="{{data.vocations.vocation1.skill2.value}}" data-dtype="Number" max="{{data.vocations.vocation1.value}}" min="0"/>
+                                    <input type="number" name="data.vocations.vocation1.skill2.value" value="{{data.data.vocations.vocation1.skill2.value}}" data-dtype="Number" max="{{data.data.vocations.vocation1.value}}" min="0"/>
                                 </td>
                                 <td colspan="4">
-                                    <input name="data.vocations.vocation1.skill2.name" type="text" value="{{data.vocations.vocation1.skill2.name}}" placeholder=""/>
+                                    <input name="data.vocations.vocation1.skill2.name" type="text" value="{{data.data.vocations.vocation1.skill2.name}}" placeholder=""/>
                                 </td>
                                     <td>
                                     <select name="data.vocations.vocation1.skill2.attribute">
-                                    {{#select data.vocations.vocation1.skill2.attribute}}
+                                    {{#select data.data.vocations.vocation1.skill2.attribute}}
                                     {{#each config.vsAttribute as |name type|}}
                                     <option value="{{type}}">{{localize name}}</option>
                                     {{/each}}
@@ -82,14 +82,14 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="number" name="data.vocations.vocation1.skill4.value" value="{{data.vocations.vocation1.skill4.value}}" data-dtype="Number" max="{{data.vocations.vocation1.value}}" min="0"/>
+                                    <input type="number" name="data.vocations.vocation1.skill4.value" value="{{data.data.vocations.vocation1.skill4.value}}" data-dtype="Number" max="{{data.data.vocations.vocation1.value}}" min="0"/>
                                 </td>
                                 <td colspan="4">
-                                    <input name="data.vocations.vocation1.skill4.name" type="text" value="{{data.vocations.vocation1.skill4.name}}" placeholder=""/>
+                                    <input name="data.vocations.vocation1.skill4.name" type="text" value="{{data.data.vocations.vocation1.skill4.name}}" placeholder=""/>
                                 </td>
                                     <td>
                                     <select name="data.vocations.vocation1.skill4.attribute">
-                                    {{#select data.vocations.vocation1.skill4.attribute}}
+                                    {{#select data.data.vocations.vocation1.skill4.attribute}}
                                     {{#each config.vsAttribute as |name type|}}
                                     <option value="{{type}}">{{localize name}}</option>
                                     {{/each}}
@@ -109,11 +109,11 @@
             <table>
                 <tr>
                     <td colspan="2">
-                        <input name="data.vocations.vocation2.vocation" type="text" value="{{data.vocations.vocation2.vocation}}" placeholder=""/>
+                        <input name="data.vocations.vocation2.vocation" type="text" value="{{data.data.vocations.vocation2.vocation}}" placeholder=""/>
                     </td>
                     <td colspan="2">
                         <select name="data.vocations.vocation2.attribute">
-                        {{#select data.vocations.vocation2.attribute}}
+                        {{#select data.data.vocations.vocation2.attribute}}
                         {{#each config.vocationAttribute as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -121,7 +121,7 @@
                         </select>
                     </td>
                     <td>
-                        <input type="number" name="data.vocations.vocation2.value" value="{{data.vocations.vocation2.value}}" data-dtype="Number" max="4" min="0"/>
+                        <input type="number" name="data.vocations.vocation2.value" value="{{data.data.vocations.vocation2.value}}" data-dtype="Number" max="4" min="0"/>
                     </td>
                 </tr>
                 <tr>
@@ -132,14 +132,14 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input type="number" name="data.vocations.vocation2.skill1.value" value="{{data.vocations.vocation2.skill1.value}}" data-dtype="Number" max="{{data.vocations.vocation2.value}}" min="0"/>
+                                    <input type="number" name="data.vocations.vocation2.skill1.value" value="{{data.data.vocations.vocation2.skill1.value}}" data-dtype="Number" max="{{data.data.vocations.vocation2.value}}" min="0"/>
                                 </td>
                                 <td colspan="4">
-                                    <input name="data.vocations.vocation2.skill1.name" type="text" value="{{data.vocations.vocation2.skill1.name}}" placeholder=""/>
+                                    <input name="data.vocations.vocation2.skill1.name" type="text" value="{{data.data.vocations.vocation2.skill1.name}}" placeholder=""/>
                                 </td>
                                     <td>
                                     <select name="data.vocations.vocation2.skill1.attribute">
-                                    {{#select data.vocations.vocation2.skill1.attribute}}
+                                    {{#select data.data.vocations.vocation2.skill1.attribute}}
                                     {{#each config.vsAttribute as |name type|}}
                                     <option value="{{type}}">{{localize name}}</option>
                                     {{/each}}
@@ -149,14 +149,14 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="number" name="data.vocations.vocation2.skill3.value" value="{{data.vocations.vocation2.skill3.value}}" data-dtype="Number" max="{{data.vocations.vocation2.value}}" min="0"/>
+                                    <input type="number" name="data.vocations.vocation2.skill3.value" value="{{data.data.vocations.vocation2.skill3.value}}" data-dtype="Number" max="{{data.data.vocations.vocation2.value}}" min="0"/>
                                 </td>
                                 <td colspan="4">
-                                    <input name="data.vocations.vocation2.skill3.name" type="text" value="{{data.vocations.vocation2.skill3.name}}" placeholder=""/>
+                                    <input name="data.vocations.vocation2.skill3.name" type="text" value="{{data.data.vocations.vocation2.skill3.name}}" placeholder=""/>
                                 </td>
                                     <td>
                                     <select name="data.vocations.vocation2.skill3.attribute">
-                                    {{#select data.vocations.vocation2.skill3.attribute}}
+                                    {{#select data.data.vocations.vocation2.skill3.attribute}}
                                     {{#each config.vsAttribute as |name type|}}
                                     <option value="{{type}}">{{localize name}}</option>
                                     {{/each}}
@@ -170,14 +170,14 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input type="number" name="data.vocations.vocation2.skill2.value" value="{{data.vocations.vocation2.skill2.value}}" data-dtype="Number" max="{{data.vocations.vocation2.value}}" min="0"/>
+                                    <input type="number" name="data.vocations.vocation2.skill2.value" value="{{data.data.vocations.vocation2.skill2.value}}" data-dtype="Number" max="{{data.data.vocations.vocation2.value}}" min="0"/>
                                 </td>
                                 <td colspan="4">
-                                    <input name="data.vocations.vocation2.skill2.name" type="text" value="{{data.vocations.vocation2.skill2.name}}" placeholder=""/>
+                                    <input name="data.vocations.vocation2.skill2.name" type="text" value="{{data.data.vocations.vocation2.skill2.name}}" placeholder=""/>
                                 </td>
                                     <td>
                                     <select name="data.vocations.vocation2.skill2.attribute">
-                                    {{#select data.vocations.vocation2.skill2.attribute}}
+                                    {{#select data.data.vocations.vocation2.skill2.attribute}}
                                     {{#each config.vsAttribute as |name type|}}
                                     <option value="{{type}}">{{localize name}}</option>
                                     {{/each}}
@@ -187,14 +187,14 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="number" name="data.vocations.vocation2.skill4.value" value="{{data.vocations.vocation2.skill4.value}}" data-dtype="Number" max="{{data.vocations.vocation2.value}}" min="0"/>
+                                    <input type="number" name="data.vocations.vocation2.skill4.value" value="{{data.data.vocations.vocation2.skill4.value}}" data-dtype="Number" max="{{data.data.vocations.vocation2.value}}" min="0"/>
                                 </td>
                                 <td colspan="4">
-                                    <input name="data.vocations.vocation2.skill4.name" type="text" value="{{data.vocations.vocation2.skill4.name}}" placeholder=""/>
+                                    <input name="data.vocations.vocation2.skill4.name" type="text" value="{{data.data.vocations.vocation2.skill4.name}}" placeholder=""/>
                                 </td>
                                     <td>
                                     <select name="data.vocations.vocation2.skill4.attribute">
-                                    {{#select data.vocations.vocation2.skill4.attribute}}
+                                    {{#select data.data.vocations.vocation2.skill4.attribute}}
                                     {{#each config.vsAttribute as |name type|}}
                                     <option value="{{type}}">{{localize name}}</option>
                                     {{/each}}
