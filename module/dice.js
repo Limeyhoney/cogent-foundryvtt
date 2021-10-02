@@ -12,7 +12,6 @@ export function rollCheck({actorData = null, skillTotal = null, destiny = false,
         num: skillTotal,
         min: minimum
     };
-    console.log(rollData.num);
     let messageData = {
         speaker: ChatMessage.getSpeaker(),
         flavor: game.i18n.localize(title) + " " + game.i18n.localize("cogent.roll") + additional
