@@ -43,10 +43,7 @@ export default class cogentCharacterSheet extends ActorSheet {
         super._render(false, this);
     }
     _cogentSkillRoll(event) {
-        console.log(event.currentTarget.dataset.value);
-        console.log(event.currentTarget.dataset.pvalue);
         let base = 3+parseInt(event.currentTarget.dataset.value)+parseInt(event.currentTarget.dataset.pvalue);
-        console.log(base);
         Dice.rollCheck({
             actorData: this.actor.data.data,
             skillTotal: base,
@@ -100,7 +97,6 @@ export default class cogentCharacterSheet extends ActorSheet {
                     value = parseInt(value)
                     if(punished==true) {malus += item.data.data.malus}
                     else {value += item.data.data.bonus};
-                    console.log(parseInt(item.data.data.malus))
                     let weapon = 0;
                     if (actor == null) {ui.notifications.error(game.i18n.localize("cogent.combatRoll.tokenError"))}
                     else {game.cogent.cogentCombatRoll(actor, weapon, value, malus, destiny, 0);}
