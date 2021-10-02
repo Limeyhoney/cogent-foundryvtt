@@ -13,9 +13,9 @@ export default class cogentActor extends Actor {
         if (data.attributes.cha.malus == "true") {data.combatData.attributeTotal--;};
 
         let armorMalus = 0;
-        let armor = actorData.items.filter(function(item) {return item.type == "armor"})
+        let armor = actorData.items.filter(function(item) {return item.data.type == "armor"})
         for(let i=0;i<armor.length;i++) {
-            armorMalus = armorMalus + armor[i].data.armor;
+            armorMalus = armorMalus + armor[i].data.data.armor;
         }
         armorMalus = armorMalus/2;
         armorMalus = Math.floor(armorMalus);
