@@ -12,7 +12,8 @@ async function preloadHandlebarsTemplates() {
         "systems/cogent/templates/partials/character/skill-block.hbs",
         "systems/cogent/templates/partials/character/assist-block.hbs",
         "systems/cogent/templates/partials/character/bio-block.hbs",
-        "systems/cogent/templates/partials/character/monster-bio-block.hbs"
+        "systems/cogent/templates/partials/character/monster-bio-block.hbs",
+        "systems/cogent/templates/partials/character/vocations.hbs"
     ];
     return loadTemplates(templatePaths);
 }

@@ -14,57 +14,7 @@
     <tr>
         <td colspan="5">{{localize "cogent.assistBlock.vocations"}}</td>
     </tr>
-    <tr>
-        <td colspan="4">
-            <input name="data.vocations.vocation1.vocation" type="text" value="{{data.vocations.vocation1.vocation}}" placeholder=""/>
-        </td>
-        <td>
-            <input type="number" name="data.vocations.vocation1.value" value="{{data.vocations.vocation1.value}}" data-dtype="Number" max="4" min="0"/>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <input name="data.vocations.vocation2.vocation" type="text" value="{{data.vocations.vocation2.vocation}}" placeholder=""/>
-        </td>
-        <td>
-            <input type="number" name="data.vocations.vocation2.value" value="{{data.vocations.vocation2.value}}" data-dtype="Number" max="4" min="0"/>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <input name="data.vocations.vocation3.vocation" type="text" value="{{data.vocations.vocation3.vocation}}" placeholder=""/>
-        </td>
-        <td>
-            <input type="number" name="data.vocations.vocation3.value" value="{{data.vocations.vocation3.value}}" data-dtype="Number" max="4" min="0"/>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="5">{{localize "cogent.assistBlock.proficiencies"}}</td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <input name="data.proficiencies.proficiency1.proficiency" type="text" value="{{data.proficiencies.proficiency1.proficiency}}" placeholder=""/>
-        </td>
-        <td>
-            <input type="number" name="data.proficiencies.proficiency1.value" value="{{data.proficiencies.proficiency1.value}}" data-dtype="Number" max="2" min="0"/>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <input name="data.proficiencies.proficiency2.proficiency" type="text" value="{{data.proficiencies.proficiency2.proficiency}}" placeholder=""/>
-        </td>
-        <td>
-            <input type="number" name="data.proficiencies.proficiency2.value" value="{{data.proficiencies.proficiency2.value}}" data-dtype="Number" max="2" min="0"/>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <input name="data.proficiencies.proficiency3.proficiency" type="text" value="{{data.proficiencies.proficiency3.proficiency}}" placeholder=""/>
-        </td>
-        <td>
-            <input type="number" name="data.proficiencies.proficiency3.value" value="{{data.proficiencies.proficiency3.value}}" data-dtype="Number" max="2" min="0"/>
-        </td>
-    </tr>
+    {{> "systems/cogent/templates/partials/character/vocations.hbs"}}
     <tr>
         <td colspan="3">{{localize "cogent.assistBlock.injuries"}}</td>
         <td colspan="2">{{localize "cogent.assistBlock.penalty"}}</td>
