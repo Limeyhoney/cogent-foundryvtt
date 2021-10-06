@@ -208,6 +208,7 @@ export default class cogentCharacterSheet extends ActorSheet {
         event.preventDefault();
         let Id = event.currentTarget.dataset.id;
         this.actor.deleteEmbeddedDocuments("Item", [Id]);
+        this.actor.update();
     }
     _cogentItemCreate(event) {
         event.preventDefault();    
@@ -218,7 +219,7 @@ export default class cogentCharacterSheet extends ActorSheet {
                 type: event.currentTarget.dataset.class
             }
         };
-        return this.actor.createEmbeddedDocuments("Item", [itemData]);
+        return this.actor.createEmbeddedDocuments("Item", [itemData], {render: true});
     }
     _onEdit(event) {
         event.preventDefault();
@@ -226,8 +227,11 @@ export default class cogentCharacterSheet extends ActorSheet {
         let Id = element.dataset.id;
         let item = this.actor.items.get(Id);
         let field = element.dataset.field;
+        let data = null;
+        if(element.type=="checkbox") {data=element.checked}
+        else {data=element.value};
 
-        return item.update({ [field]: element.value});
+        return item.update({ [field]: data});
     }
     _cogentItemEdit(event) {
         event.preventDefault();

@@ -334,12 +334,14 @@
 		},
 		"armor": {
 			"templates": ["itemDescription"],
-			"armor": 0
+			"armor": 0,
+			"equipped": true
 		},
 		"misc": {
 			"templates": ["itemDescription"],
 			"count": 1,
-			"type": "item"
+			"type": "item",
+			"skills": []
 		}
 	}
 }

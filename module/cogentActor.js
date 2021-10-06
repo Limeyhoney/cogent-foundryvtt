@@ -13,12 +13,19 @@ export default class cogentActor extends Actor {
         if (data.attributes.cha.malus == "true") {data.combatData.attributeTotal--;};
 
         let armorMalus = 0;
-        let armor = actorData.items.filter(function(item) {return item.type == "armor"})
+        let endurance = parseInt(data.skills.strength.endurance.value);
+        let armor = actorData.items.filter(function(item) {return item.data.type == "armor"})
         for(let i=0;i<armor.length;i++) {
-            armorMalus = armorMalus + armor[i].data.armor;
-        }
+            if (armor[i].data.data.equipped){armorMalus = armorMalus + armor[i].data.data.armor;};
+        };
         armorMalus = armorMalus/2;
         armorMalus = Math.floor(armorMalus);
+        if (endurance < armorMalus) {
+            armorMalus = armorMalus-endurance;
+        }
+        else {
+            armorMalus = 0;
+        };
         data.combatData.malus=armorMalus;
     }
 }

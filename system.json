@@ -2,7 +2,7 @@
   "name": "cogent",
   "title": "Cogent",
   "description": "Cogent Roleplaying System",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "templateVersion": 2,
   "author": "Limeyhoney",
   "minimumCoreVersion": "0.8.9",
@@ -34,6 +34,13 @@
       "system": "cogent",
       "path": "./packs/weapons.db",
       "entity": "Item"
+    },
+    {
+      "name": "quick-reference",
+      "label": "Rules Quick Reference",
+      "system": "cogent",
+      "path": "./packs/quick-reference.db",
+      "entity": "JournalEntry"
     }
   ],
   "languages": [
