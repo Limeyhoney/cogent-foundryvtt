@@ -24,6 +24,7 @@ cogent.vsAttribute = {
 cogent.miscItems = {
     none: "",
     vocation: "extCogent.vocation.vocation",
+    item: "cogent.item.item"
 }
 
 cogent.extvocationAttribute = {

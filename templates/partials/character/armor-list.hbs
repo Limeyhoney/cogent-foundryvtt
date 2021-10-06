@@ -9,10 +9,10 @@
             </td>
         </tr>
         <tr class="flex">
-            <td class="left">{{localize "cogent.armor"}}:</td>
-            <td title="Armor" class="right">
-                <input data-id="{{_id}}" name="{{data.armor}}" type="number" name="data.armor" value="{{data.armor}}" data-dtype="Number" min="0" readonly="true"/>
-            </td>
+            <td class="inputName">{{localize "cogent.armor"}}: {{data.armor}}</td>
+            <td title="Armor" class="rightAlign">
+                <input type="checkbox" name="data.equipped" data-field="data.equipped" class="inline-edit" {{checked data.equipped}} data-id="{{_id}}" title="Equiped?"/>
+                </td>
         </tr>
         <tr>
         </tr>

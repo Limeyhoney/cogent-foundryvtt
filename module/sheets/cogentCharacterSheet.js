@@ -9,9 +9,9 @@ export default class cogentCharacterSheet extends ActorSheet {
     }
     getData() {
         const data = super.getData()
-        data.data.inventory.weapon = data.items.filter(function(item) {return item.type == "weapon"})
-        data.data.inventory.armor = data.items.filter(function(item) {return item.type == "armor"})
-        data.data.inventory.items = data.items.filter(function(item) {return item.data.type == "item"})
+        data.data.data.inventory.weapon = data.items.filter(function(item) {return item.type == "weapon"})
+        data.data.data.inventory.armor = data.items.filter(function(item) {return item.type == "armor"})
+        data.data.data.inventory.items = data.items.filter(function(item) {return item.data.type == "item"})
         data.config = CONFIG.cogent;
         return data;
     }
@@ -58,7 +58,7 @@ export default class cogentCharacterSheet extends ActorSheet {
         let element = event.currentTarget;
         let Id = element.dataset.id;
         let actor = this.actor
-        let item = actor.getOwnedItem(Id);
+        let item = actor.items.get(Id);
 
         new Dialog({
             title:'Combat Roll',
@@ -97,7 +97,6 @@ export default class cogentCharacterSheet extends ActorSheet {
                     value = parseInt(value)
                     if(punished==true) {malus += item.data.data.malus}
                     else {value += item.data.data.bonus};
-                    console.log(parseInt(item.data.data.malus))
                     let weapon = 0;
                     if (actor == null) {ui.notifications.error(game.i18n.localize("cogent.combatRoll.tokenError"))}
                     else {game.cogent.cogentCombatRoll(actor, weapon, value, malus, destiny, 0);}
@@ -118,7 +117,7 @@ export default class cogentCharacterSheet extends ActorSheet {
         let element = event.currentTarget;
         let Id = element.dataset.id;
         let actor = this.actor
-        let item = actor.getOwnedItem(Id);
+        let item = actor.items.get(Id);
         let body = ``;
         let itemData= item.data.data;
         let armorBonus = itemData.armorBonus;
@@ -208,7 +207,8 @@ export default class cogentCharacterSheet extends ActorSheet {
     _cogentItemRemove(event) {
         event.preventDefault();
         let Id = event.currentTarget.dataset.id;
-        this.actor.deleteEmbeddedEntity("OwnedItem", Id);
+        this.actor.deleteEmbeddedDocuments("Item", [Id]);
+        this.actor.update();
     }
     _cogentItemCreate(event) {
         event.preventDefault();    
@@ -219,22 +219,25 @@ export default class cogentCharacterSheet extends ActorSheet {
                 type: event.currentTarget.dataset.class
             }
         };
-        return this.actor.createOwnedItem(itemData);
+        return this.actor.createEmbeddedDocuments("Item", [itemData], {render: true});
     }
     _onEdit(event) {
         event.preventDefault();
         let element = event.currentTarget;
         let Id = element.dataset.id;
-        let item = this.actor.getOwnedItem(Id);
+        let item = this.actor.items.get(Id);
         let field = element.dataset.field;
+        let data = null;
+        if(element.type=="checkbox") {data=element.checked}
+        else {data=element.value};
 
-        return item.update({ [field]: element.value});
+        return item.update({ [field]: data});
     }
     _cogentItemEdit(event) {
         event.preventDefault();
         let element = event.currentTarget;
         let itemId = element.dataset.id;
-        let item = this.actor.getOwnedItem(itemId);
+        let item = this.actor.items.get(itemId);
 
         item.sheet.render(true);
     }

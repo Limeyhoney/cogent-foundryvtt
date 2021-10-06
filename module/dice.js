@@ -1,5 +1,5 @@
 export function rollCheck({actorData = null, skillTotal = null, destiny = false, title = "", additional = ""} = {}) {
-    let rollForumla = "@num d6cs>=@min";
+    let rollForumla = "(@num)d6cs>=@min";
     let minimum = 4;
     if (destiny == true && actorData.destiny.value > 0) {
         minimum = 3;

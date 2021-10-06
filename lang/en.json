@@ -109,7 +109,8 @@
         },
         "item": {
             "class": "Class",
-            "default": "New Item"
+            "default": "New Item",
+            "item": "Item"
         }
     }
 }

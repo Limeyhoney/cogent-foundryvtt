@@ -1,7 +1,7 @@
 <section>
     <table>
         <tr class="flex">
-            <td title="{{data.data.description}}" class="left flex">
+            <td title="{{data.description}}" class="left flex">
                 <div>{{name}}</div>
                 <a class="cogent-croll" title="Combat Roll" data-id="{{_id}}">
                     <i class="fas fa-dice" data-id="{{_id}}"></i>
@@ -15,12 +15,12 @@
             </td>
         </tr>
         <tr class="flex">
-            <td title="Bonus Dice" class="left">{{localize "cogent.bonus"}}: {{data.data.bonus}}{{localize "cogent.dice"}}</td>
-            <td title="Situational Malus Dice" class="middle">{{localize "cogent.malus"}}: {{data.data.malus}}{{localize "cogent.dice"}}</td>
+            <td title="Bonus Dice" class="left">{{localize "cogent.bonus"}}: {{data.bonus}}{{localize "cogent.dice"}}</td>
+            <td title="Situational Malus Dice" class="middle">{{localize "cogent.malus"}}: {{data.malus}}{{localize "cogent.dice"}}</td>
             <td title="Ammo" class="right flex">
                 {{#if (gte data.ammo 0)}}
                 <div class="inputName">{{localize "cogent.weapon.ammo"}}</div>
-                <input class="input inline-edit" data-id="{{_id}}" data-field="data.ammo" type="number" name="data.ammo" value="{{data.data.ammo}}" data-dtype="Number" min="0"/>
+                <input class="input inline-edit" data-id="{{_id}}" data-field="data.ammo" type="number" name="data.ammo" value="{{data.ammo}}" data-dtype="Number" min="0"/>
                 {{/if}}
             </td>
         </tr>
